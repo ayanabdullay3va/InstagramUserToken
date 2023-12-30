@@ -2,24 +2,26 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface UserState {
-  value: number;
+  products: object[];
+  isLogin: boolean;
 }
 
 const initialState: UserState = {
-  value: 0,
+  products: [{}],
+  isLogin: true,
 };
 
 export const UserState = createSlice({
   name: "users",
   initialState,
   reducers: {
-    decrement: (state) => {
-      state.value -= 1;
+    login: (state, actions) => {
+      state.isLogin = actions.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { decrement } = UserState.actions;
+export const { login } = UserState.actions;
 
 export default UserState.reducer;

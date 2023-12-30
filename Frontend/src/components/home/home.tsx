@@ -1,15 +1,12 @@
-import Login from "./../../components/login/login";
 import React from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 type Props = {};
 
-function home({}: Props) {
-  return (
-    <div>
-      home
-      <Login />
-    </div>
-  );
-}
+const Home = () => {
+  const isLogin = useSelector((state) => state);
+  console.log(isLogin);
 
-export default home;
+  return <div>home</div>;
+};
+
+export default Home;

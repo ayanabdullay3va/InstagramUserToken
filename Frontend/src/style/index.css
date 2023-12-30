@@ -1,0 +1,35 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login-form {
+  max-width: 1000px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.animate__animated animate__backInDown {
+  text-align: center;
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.animate__animated animate__backInDown h1 {
+  text-align: center;
+}
